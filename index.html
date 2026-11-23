@@ -77,7 +77,7 @@ function entrada(){
     if(!r.ok){sug.append(h('p',{class:'er'},r.erro));return}
     r.lista.forEach(f=>sug.append(h('button',{class:'it',onclick:()=>pinTela(f)},f.nome)));
     if(!r.lista.length)sug.append(h('p',{class:'mu'},'Não encontramos esse nome. Confira a grafia ou fale com a organização.'))},LISTA?100:300)};
-  $.replaceChildren(h('main',{class:'ent'},h('img',{src:LC,alt:'Conecta Mesa',class:'lg1'}),h('p',{class:'mu'},'Escolha a sua mesa da formatura de um jeito simples e justo.'),inp,sug,h('div',{class:'logos peq'},h('img',{src:LV,alt:'Vivup Eventos'}),h('img',{src:LM,alt:'Maple Bear'})),h('small',{class:'mu'},'Uma realização Vivup Eventos · Formatura Maple Bear'),h('button',{class:'adm',onclick:modalAdmin},'admin')))}
+  $.replaceChildren(h('main',{class:'ent'},h('img',{src:LC,alt:'Conecta Mesa',class:'lg1'}),h('p',{class:'mu'},'Encontre sua turma. Escolha sua mesa'),inp,sug,h('div',{class:'logos peq'},h('img',{src:LV,alt:'Vivup Eventos'}),h('img',{src:LM,alt:'Maple Bear'})),h('small',{class:'mu'},'Uma realização Vivup Eventos · Formatura Maple Bear'),h('button',{class:'adm',onclick:modalAdmin},'admin')))}
 function pinTela(f){
   const i=h('input',{class:'in pin',inputmode:'numeric',maxlength:'4',type:'password',placeholder:'••••',autocomplete:'off','aria-label':'PIN de 4 dígitos'}),e=h('p',{class:'er'});
   i.oninput=()=>{i.value=i.value.replace(/\D/g,'')};
